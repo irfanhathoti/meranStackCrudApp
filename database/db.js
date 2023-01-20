@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 
 
-const connection = async (username,password) => {
+const connection = async () => {
 
 
-    const URL = `mongodb+srv://${username}:${password}@crudapp.4beffso.mongodb.net/CRUD_OPERATION`
+    const URL = process.env.DATABASE
+    console.log(URL)
 
     try {
         mongoose.set({strictQuery:false})

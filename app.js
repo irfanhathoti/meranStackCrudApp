@@ -21,10 +21,10 @@ app.use(bodyParser.urlencoded({
 
 app.use('/',routes)
 
-const username = process.env.DB_USERNAME
-const password = process.env.DB_PASSWORD
+// const username = process.env.DB_USERNAME
+// const password = process.env.DB_PASSWORD
 const port = process.env.PORT || 8000
-connection(username,password)
+connection()
 
 app.listen(port,()=>{
     console.log("Application running at.....",port)
